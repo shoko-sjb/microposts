@@ -15,7 +15,7 @@ class CreateFavoritesTable extends Migration
     {
         Schema::create('favorites', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('$micropost->users')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index();
             $table->integer('micropost_id')->unsigned()->index();
             $table->timestamps();
             
